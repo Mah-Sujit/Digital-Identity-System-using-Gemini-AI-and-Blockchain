@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  email TEXT UNIQUE NOT NULL,
+  did TEXT UNIQUE NOT NULL,
+  biometric_hash TEXT NOT NULL,
+  salt TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
